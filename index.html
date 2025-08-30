@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MindState</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="sky" class="sky night">
+      <div id="stars" class="stars"></div>
+      <div id="shootingStars" class="shootingStars"></div>
+
+      <div id="moon" class="celestial" title="Toggle Day/Night"></div>
+      <div id="sun" class="celestial" title="Toggle Day/Night"></div>
+
+      <div id="birds" class="birds">
+        <div class="bird" style="--i:0"></div>
+        <div class="bird" style="--i:1"></div>
+        <div class="bird" style="--i:2"></div>
+        <div class="bird" style="--i:3"></div>
+        <div class="bird" style="--i:4"></div>
+      </div>
+
+      <div class="city" id="city">
+        <div class="building" data-element="Space" aria-label="Space building"></div>
+        <div class="building" data-element="Air" aria-label="Air building"></div>
+        <div class="building" data-element="Fire" aria-label="Fire building"></div>
+        <div class="building" data-element="Water" aria-label="Water building"></div>
+        <div class="building" data-element="Earth" aria-label="Earth building"></div>
+      </div>
+    </div>
+
+    <!-- NAME modal -->
+    <div id="nameModal" class="modal">
+      <div class="modal-inner">
+        <div class="modal-title">Welcome to MindState</div>
+        <p class="modal-desc">Enter your name. The MindState generated is valid for 1 hour and the same name is blocked for that hour.</p>
+        <input id="userNameInput" type="text" placeholder="Enter your name" autocomplete="off" />
+        <div class="modal-actions">
+          <button id="nameSubmit" class="btn primary">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- entry modal -->
+    <div id="entryModal" class="modal">
+      <div class="modal-inner">
+        <div id="entryText" class="modal-title">Entering world</div>
+        <p id="entrySmall" class="modal-desc">Confirm to enter.</p>
+        <div class="modal-actions">
+          <button id="entryBtn" class="btn primary">Enter</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- statement card -->
+    <div id="statementCard" class="statementCard" aria-live="polite" style="display:none;">
+      <div id="statementContent" class="statementContent"></div>
+      <div id="statementFooter" class="statementFooter"></div>
+      <div class="card-actions">
+        <button id="downloadBtn" class="btn">Download PNG</button>
+        <button id="resetBtn" class="btn secondary">Reset</button>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
